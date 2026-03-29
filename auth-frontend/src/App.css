@@ -1,0 +1,131 @@
+/* ── Global reset ──────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  background: #f0f4f8;
+  color: #1a202c;
+}
+
+/* ── Auth page centering ───────────────────────────────────────────────────── */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* ── Auth card ─────────────────────────────────────────────────────────────── */
+.auth-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+/* ── Alerts ────────────────────────────────────────────────────────────────── */
+.alert {
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+.alert-danger  { background: #fff5f5; border: 1px solid #fc8181; color: #c53030; }
+.alert-warning { background: #fffaf0; border: 1px solid #f6ad55; color: #c05621; }
+.alert-success { background: #f0fff4; border: 1px solid #68d391; color: #276749; }
+
+/* ── Forms ─────────────────────────────────────────────────────────────────── */
+.form-group        { margin-bottom: 1rem; }
+.form-group label  { display: block; font-weight: 600; font-size: 0.875rem;
+                     margin-bottom: 0.35rem; color: #4a5568; }
+.form-control {
+  display: block; width: 100%; padding: 0.55rem 0.75rem;
+  border: 1px solid #cbd5e0; border-radius: 6px; font-size: 0.95rem;
+  transition: border-color 0.15s, box-shadow 0.15s; outline: none;
+}
+.form-control:focus { border-color: #667eea; box-shadow: 0 0 0 3px rgba(102,126,234,0.2); }
+.form-control:disabled { background: #edf2f7; cursor: not-allowed; }
+.form-text.text-muted { font-size: 0.8rem; color: #718096; margin-top: 0.3rem; }
+
+/* ── Input group ───────────────────────────────────────────────────────────── */
+.input-group { display: flex; }
+.input-group .form-control { border-top-right-radius: 0; border-bottom-right-radius: 0; flex: 1; }
+.input-group-append .btn {
+  border-top-left-radius: 0; border-bottom-left-radius: 0;
+  border-left: none; padding: 0 0.85rem;
+}
+
+/* ── Buttons ───────────────────────────────────────────────────────────────── */
+.btn {
+  display: inline-block; padding: 0.55rem 1.25rem; font-size: 0.95rem;
+  font-weight: 600; border-radius: 6px; border: 1px solid transparent;
+  cursor: pointer; transition: background 0.15s, opacity 0.15s;
+  text-align: center;
+}
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.btn-primary { background: #667eea; color: #fff; border-color: #667eea; }
+.btn-primary:hover:not(:disabled) { background: #5a67d8; }
+.btn-success { background: #48bb78; color: #fff; border-color: #48bb78; }
+.btn-success:hover:not(:disabled) { background: #38a169; }
+.btn-danger  { background: #fc8181; color: #fff; border-color: #fc8181; }
+.btn-danger:hover:not(:disabled)  { background: #e53e3e; }
+.btn-outline-secondary {
+  background: #fff; color: #718096; border-color: #cbd5e0;
+}
+.btn-outline-secondary:hover:not(:disabled) { background: #edf2f7; }
+.btn-link { background: none; border: none; color: #667eea; padding: 0;
+            font-weight: 600; cursor: pointer; }
+.btn-block { width: 100%; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+
+/* ── Loading screen ────────────────────────────────────────────────────────── */
+.loading-screen {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; min-height: 100vh; gap: 1rem;
+  color: #667eea;
+}
+
+/* ── Spinner (CSS only, no Bootstrap dependency needed) ──────────────────── */
+.spinner-border {
+  width: 3rem; height: 3rem; border-radius: 50%;
+  border: 4px solid #e2e8f0;
+  border-top-color: #667eea;
+  animation: spin 0.75s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Dashboard ─────────────────────────────────────────────────────────────── */
+.dashboard-page .card {
+  background: #fff; border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08); border: none;
+}
+.table { width: 100%; border-collapse: collapse; margin-bottom: 0; }
+.table th, .table td { padding: 0.75rem; border: 1px solid #e2e8f0; }
+.table th { background: #f7fafc; font-weight: 600; width: 30%; }
+
+/* ── Utilities ─────────────────────────────────────────────────────────────── */
+.container { max-width: 800px; margin: 0 auto; padding: 0 1rem; }
+.mb-3 { margin-bottom: 1rem; }
+.text-muted { color: #718096; }
+.shadow-sm { box-shadow: 0 1px 3px rgba(0,0,0,0.12); }
+.p-4 { padding: 1.5rem; }
